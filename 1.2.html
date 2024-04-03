@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Your Questions Answered</title>
+    <style>
+        body {
+             background-color: rgb(219, 241, 241);
+        }
+
+        .head {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: auto;
+            height: 600px;
+            background-image: url(https://wallpapers.com/images/hd/4k-kitchen-background-3840-x-2160-24lxyfnhyls9d7lc.jpg);
+            margin: 0;
+            padding: 0;
+        }
+        #name {
+            color: rgb(14, 14, 14);
+            font-size: 80px;
+        }
+        .middle1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            
+        }
+        .middle2 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            
+        }
+        .middle3{
+            display: block;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+        }
+
+        .im  {
+            margin: 10px 5px ;
+            padding: 20px;
+            width: 1000px;
+            height: 150px;
+            background-color: rgb(208, 235, 225);
+            justify-content: center;
+            font-size: x-large;
+            text-decoration: solid;
+   
+        }
+        footer {
+    background-color: #83bbf8;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #faf7fa, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4eb9e3, #399cf9);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #4158d0;
+}
+input[type="checkbox"]{
+  display: none;
+}
+h4{
+    font-size: 25px;
+    color: #092d74;
+    font-weight: 700;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.frame {
+      display: flex;
+      height: 400px; 
+      padding: 44px,0px,41px,0px;
+    }
+    
+
+    .frame img {
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .frame .text {
+      width: 50%;
+      padding: 20px;
+      font-style: normal;
+      font-weight: 50;
+     
+    }
+    .para{
+        font-size: x-large;
+    }
+    .para1{
+        font-size: large;
+    }
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Importance Of Water</a></li>
+            <li><a href="#">Techniques Of Saving Water</a></li>
+            <li><a href="1.html">Indoor Water-Saving </a></li>
+            <li><a href="2.html">Outdoor Water-Saving</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">Newsletter </a></li>
+         </ul>
+      </div>
+      
+    <div class="head" id="name">
+
+        Indoor Water Saving
+
+
+    </div> <br> <br>
+    <div class="middle1">
+            <div class="im" id="m1">
+                <ul type="none" id="item" class="list">
+                    <li  id="item1" class="list1">
+                        <a href="1.2.html" style="text-decoration: none;">Your Quesions Answered : </a>
+                    </li>
+                    <li  id="item2" class="list2">
+                        <a href="1.2.html" style="text-decoration: none;">Is 24,000 Gallons Too Much?</a>
+                    </li>
+                    <li  id="item3" class="list3">
+                        <a href="1.2.1.html" id="a1" style="text-decoration: none;">How Does Your Water Use Stack Up?</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div>
+            <h4>Is 24,000 Gallons of Water too Much for a Family of Three?</h4> <br> <br>
+            </div> <br> <br>
+            <div>
+            <p>
+                When in doubt, ask. Here are two frequently asked questions and answers about home water use that we think all homeowners can take advantage of. If you have more questions,<a href="http://127.0.0.1:3002/contactus.html" style="text-decoration: none;">Contact us</a>"!"
+                </p>
+            </div>
+    </div> <br> <br>
+    <div class="middle2">
+        <div class="frame">
+            <img src="https://wateruseitwisely.com/wp-content/uploads/2021/06/cdc-aeh1dbI_a7I-unsplash-768x512.jpg" alt="">
+            <div class="text">
+                <h4>You Asked ...</h4> <br> <br> <br>
+                <p class="para">
+                    I have a concern about high water usage. We have lots of mature landscaping, but artificial turf (no grass), a fairly large pool, hot tub, three full baths, and a 1/2 bath. There are three people in our home; I am home a lot during the day. Is 24,000 gallons of usage for the month of August something to be concerned about? It seems like an awful lot. What can we do?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="middle3">
+        
+        <h4>We Answered...</h4>
+       
+        <p class="para1">
+            Thank you for your interest in saving water and concerns for your household water use. <br> <br>
+        </p>
+        <p class="para1">
+            Let’s look at your daily per person usage. If you used 24,000 gallons, we’ll divide by 3 people = 8,000 gallons per person per month. <br>Let’s divide 8,000 by  31= 258 gallons per person per day. Yep, that’s a lot! By comparison, the photo at right shows our traveling water tower,<br> which is made up of 120 one-gallon jugs and  represents the average amount of water used per person, per day in Arizona. <br> <br>
+        </p>
+        <p class="para1">
+            Of course, August is a very hot month and I suspect that a lot of the water is being used in the landscape or <br>swimming pool (glad to hear you don’t have grass though). <br> <br>
+        </p>
+        <p class="para1">
+            You can easily be losing 3,400 gallons in your pool alone during August due to evaporation and about 17,000 gallons <br>would be typical water needs in August for a very large landscape of about 10,000 square feet. <br>Add the two together and you already have over 20,000 gallons, so your outdoor use might be why your bill was so high. <br>However, I’m just guessing on your landscape size and I’m not sure if you live in Arizona or another climate. <br>There are always other things to check. <br> <br>
+        </p>
+        <ul>
+            <li class="para1">Look around indoors and outdoors for leaks (<a href="https://www.smarthomewaterguide.org" target="_blank" rel="noopener">this guide will help)</a>.
+            </li> <br> 
+            <li class="para1">Listen for running backwash water around water treatment appliances like softeners and RO systems.
+            </li> <br>
+            <li class="para1">Check to see if your irrigation timer has been set properly.
+            </li> <br>
+            <li class="para1">Check to make sure you are watering properly with our <a href="https://wateruseitwisely.com/landscape-wisely/lawn-watering-guide/">Landscape Watering Guide</a>.
+            </li> <br>
+            <li class="para1">Be sure to test your toilet for leaks, trickling sounds, or water moving in the bowl.
+            </li> <br>
+            <li class="para1">Check your pool for leaks, especially if you have an automatic pool refiller.
+            </li> <br>
+            <li class="para1">Browse through our 100+ Ways to Conserve for easy tips.
+            </li> <br>
+            <li class="para1">Find out where you use water in and around the home with LIQUID LEGACY's free <a href="http://www.amwua.org/water-use-calculator" target="_blank" rel="noopener">home water calculator</a>.
+            </li> <br>
+        </ul>
+    </div> <br> <br>
+    <div class="middle3">
+
+        <h4>Check With Your Water Provider</h4>
+
+        <p class="para1">
+            Another helpful tip is to see if your water provider offers a water calculator. Anyone is welcome to try ours at <br>the <a href="https://secure.mesaaz.gov/watercalculator" target="_blank" rel="noopener">City of Mesa’s Know Your H20 Water Calculator</a>. Enter information about your household, and we’ll estimate how much water  <br>you should be using for the different months of the year. The outdoor water use calculations are adjusted for an Arizona desert climate. <br>Some water providers also offer home water audits to help identify inefficiencies. <br>Good luck and we hope you’re well on your way to reducing your water use at your home.
+        </p>
+
+    </div>
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+          <center>
+            &copy; 2024 Water Conservation. All rights reserved.
+          </center>  
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </footer>
+</body>
+
+</html>

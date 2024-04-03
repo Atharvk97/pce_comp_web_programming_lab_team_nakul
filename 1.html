@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my1style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Indoor Water Saving</title>
+    <style>
+        body {
+    background-color: rgb(219, 241, 241);
+}
+.head {
+   display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: 600px;
+    background-image: url(https://wallpapers.com/images/hd/4k-kitchen-background-3840-x-2160-24lxyfnhyls9d7lc.jpg);
+    margin: 0;
+    padding: 0;
+    
+   
+}
+
+#name {
+    color: rgb(14, 14, 14);
+    font-size: 80px;
+
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 40px;
+    padding: 10px 20px;
+}
+
+.im img {
+    border: 5px solid aqua;
+    border-radius: 200px;
+}
+
+.para {
+    margin: 15px 25px;
+    padding: 10px 20px;
+    font-size: x-large;
+    font-style: italic;
+}
+.bottom{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+
+}
+.blog{
+    margin: 10px 5px ;
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+    background-color: aquamarine;
+    justify-content: center;
+   
+      
+}
+#blog1{
+    background-image: url(https://wateruseitwisely.com/wp-content/uploads/2021/06/HowToFixStuff_Tile_467X451.jpg);
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    line-height: 1.15;
+    display: block;
+}
+
+#blog2{
+    background-image: url(https://media.istockphoto.com/id/1194337503/video/aerial-view-of-clear-turquoise-sea-and-waves.jpg?s=640x640&k=20&c=SEPne9K9Jgo-xFQAi1t7o5HgrTwjPNH84xp8sSQc0FI=);
+    color: white;
+    text-align: center;
+    align-items: center ;
+    font-size: 40px;
+}
+#blog3{
+    background-image: url(https://wateruseitwisely.com/wp-content/uploads/2021/04/Water-Saving-Products.jpg);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.img1
+{
+    color: white;
+}
+footer {
+    background-color: #83bbf8;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #faf7fa, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4eb9e3, #399cf9);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #4158d0;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <input type="checkbox" id="active">
+      <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Importance Of Water</a></li>
+            <li><a href="#">Techniques Of Saving Water</a></li>
+            <li><a href="#">Indoor Water-Saving </a></li>
+            <li><a href="#">Outdoor Water-Saving</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">Newsletter </a></li>
+         </ul>
+      </div>
+      
+    <div class="head" id="name">
+
+        Indoor Water Saving
+
+
+    </div>
+    <div class="middle">
+        <div class="im">
+            <img src="https://c4.wallpaperflare.com/wallpaper/272/679/796/faucet-interior-kitchen-sink-wallpaper-preview.jpg"
+                alt="Image is Loading">
+        </div>
+        <p class="para">
+            Making adjustments to your everyday water usage may sound scary. But there is no need to feel like a fish out of water! Saving water indoors is easy and painless. And there are so many opportunities to save, whether it’s in your kitchen, bathroom, or laundry room. The smallest adjustments can save you a good deal of water… and money!
+        </p>
+
+    </div>
+    <div class="bottom">
+        <a href="1.1.html" back style="text-decoration: none;" class="img1">
+        <p><div id="blog1" class="blog"> </p>
+            <p>How To Fix</p>
+        </a>
+            
+        </div>
+        <div id="blog2" class="blog">
+            <a href="1.2.html" back style="text-decoration: none;" class="img1">
+                <p>Your Questions Answered</p>
+            </a>
+            </div>
+        <div id="blog3" class="blog">
+            <a href="1.3.html" back style="text-decoration: none;" class="img1">
+                <p>Water-Saving Products</p>
+            </a>
+        </div>
+        
+
+       
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+          <center>
+            &copy; 2024 Water Conservation. All rights reserved.
+          </center>  
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </footer>
+</body>
+
+</html>

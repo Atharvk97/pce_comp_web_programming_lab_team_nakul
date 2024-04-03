@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my2style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Soil Improvement</title>
+    <style>
+        body 
+        {
+            background-color: rgb(219, 241, 241);
+        }
+        .head 
+        {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: auto;
+            height: 600px;
+            background-image: url(https://cdn.wallpaperjam.com/content/images/79/4a/794a41be2d03c640ab6060088f0225b93177e304.jpg);
+            border: 5px solid rgb(184, 235, 237) ;
+            border-radius: 0px;
+            margin: 0%;
+            padding: 0%;
+        }
+        #name 
+        {
+            color: rgb(55, 142, 72);
+            font-size: 80px;
+
+        }
+        footer {
+    background-color: #83bbf8;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #faf7fa, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4eb9e3, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #000000;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #092c09;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+.middle1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            
+        }
+        .im  {
+            margin: 10px 5px ;
+            padding: 20px;
+            width: 100%;
+            height: 250px;
+            background-color: rgb(208, 235, 225);
+           
+            font-size: 25px;
+            font-weight: 700;
+            text-decoration: solid;
+   
+        }
+        h4{
+            margin: 0%;
+    font-size: 25px;
+    color: #092d74;
+    font-weight: 700;
+}
+h3{
+            margin: 0%;
+    font-size: 25px;
+    color: #092d74;
+    font-weight: 700;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.para1{
+        font-size: large;
+    }
+    .middle2 {
+           
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            background-color: #cff5fc;
+            
+        }
+        .frame {
+      display: flex;
+      height: 400px; 
+      padding: 44px,0px,41px,0px;
+    }
+    
+
+    .frame img {
+      width: 60;
+      height: 160;
+      object-fit: cover;
+    }
+    .frame .text {
+      width: 60%;
+      padding: 20px;
+      font-style: normal;
+      font-weight: 50;
+     
+    }
+    .middle3 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+       <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Importance Of Water</a></li>
+          <li><a href="#">Techniques Of Saving Water</a></li>
+          <li><a href="#">Indoor Water-Saving </a></li>
+          <li><a href="#">Outdoor Water-Saving</a></li>
+          <li><a href="#">AboutUs</a></li>
+          <li><a href="#">Newsletter </a></li>
+       </ul>
+    </div>
+    <div class="head" id="name">
+
+        Outdoor Water Saving
+
+
+    </div> <br> <br>
+    <div class="middle1">
+        <div class="im" id="m1">
+            <ul type="none" id="item" class="list">
+                <li  id="item1" class="list1">
+                    <a href="2.html" style="text-decoration: none; color: #092d74;">Saving Water Outdoors</a> <br>
+                </li>
+                <li  id="item2" class="list2">
+                    <a href="2.1.html" style="text-decoration: none; color: #092d74;">Soil Improvement</a>
+                </li>
+                <li  id="item3" class="list3">
+                    <a href="2.2.html" id="a1" style="text-decoration: none; color: #092d74;">Efficient Irrigation</a>
+                </li>
+                <li  id="item1" class="list1">
+                    <a href="2.3.html" style="text-decoration: none; color: #092d74;">Low-Water Use Plants</a>
+                </li>
+                <li  id="item2" class="list2">
+                    <a href="2.4.html" style="text-decoration: none; color: #092d74;">Mulch</a>
+                </li>
+                <li  id="item3" class="list3">
+                    <a href="2.5.html" id="a1" style="text-decoration: none; color: #092d74;">Practical Turf Areas</a>
+                </li>
+                <li  id="item3" class="list3">
+                    <a href="2.6.html" id="a1" style="text-decoration: none; color: #092d74;">Appropriate Maintenance</a>
+                </li>
+                
+            </ul>
+        </div>
+</div> <br> <br>
+
+    <div class="middle2">
+        <h4>Soil Improvement Tips – All the Dirt</h4> <br>
+        <p class="para1">
+            Soil plays a big part in a water-wise landscape, and the health and condition of the soil can actually make your landscape more efficient in how it uses water. In our low desert areas, soil types typically include heavy clay soils that hold moisture well. However, these soils can easily get compacted making them slow to absorb water and prone to runoff. Soils found near the foothills areas tend to have a more sandy and rocky texture, and may have caliche (hard calcium carbonate cement-like layers). Sandy soils drain well and dry out more quickly, but sometimes caliche layers don’t allow water to drain through.
+            <br><br>
+            Because of our low rainfall and high summer temperatures, both soils are typically very low in organic matter and high in alkalinity (pH of 8 or above). No, our soils aren’t that dark, rich, river bottom soil that you may wish for, but the good news is that most of our desert plants thrive naturally in them. Additional soil improvements and soil amendments will be needed for turf areas, flower or vegetable gardens, and for some tropical or other non-native plants. Get more information about soil types and improvement options by contacting your County Cooperative Extension office.
+        </p>
+
+    </div> <br> <br>
+    <div class="middle3">
+        <div class="frame">
+            <img src="https://wateruseitwisely.com/wp-content/uploads/2021/03/4.6.6_GetYourSoilTested.jpg" alt="">
+            <div class="text">
+                <h3>Our Top Ways to Keep Your Soil Healthy:</h3> <br> <br> 
+                <ul style="font-size: large;" >
+                    <li>Soil should be loosened at planting time to encourage better infiltration of water, air, and nutrients.</li> <br>
+                    <li>Regularly top your plant roots with organic mulches like bark or shredded wood chips to improve the conditions for soil microbes.</li> <br>
+                    <li>Allow the natural drop of leaves and flowers to be left on the ground as a natural mulch.</li> <br>
+                    </ul>
+            </div>
+        </div>
+    </div> <br> <br>
+    <div class="middle2">
+        <h3>Soil Improvement Can Also be Defined as Regrading Your Yard</h3> <br>
+        <p class="para1" style="font-size: large;">
+            The truth is, most of our municipal water – the water you use in your landscape – is high in salts and other minerals. <br>The best water for your soil and plants comes out of the sky as rainwater. <br>While you may not think we get enough rainfall here in the desert southwest, even 8-inches of rain a year can generate over 7,000 gallons of water runoff from a 1,500 square foot home.
+        </p>
+        <p class="para1" style="font-size: large;">
+            Most people will think about yard grading as a practice to correct bad drainage or specifically to drain water AWAY from your property! <br>While it is important to protect your home or other structures from flooding during rainstorms, we recommend collecting all the rainwater <br>that you can and keeping it on your property to water your landscape. <br>You can learn more about creating gentle berms (mounds) and swales (depressions) to collect this valuable resource on our <a href="https://wateruseitwisely.com/saving-water-outdoors/rainwater-harvesting/">Rainwater Harvesting page.</a>
+        </p>
+        <p class="para1">If you’re learning about soil, you’re likely wondering about <a href="https://wateruseitwisely.com/saving-water-outdoors/our-top-landscape-ideas/planting-trees-shrubs/">Planting Trees and Shrubs</a>.</p>
+
+    </div> <br> <br>
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div> <br> <br>
+    <div class="footer-bottom">
+        <center>
+          &copy; 2024 Water Conservation. All rights reserved.
+        </center>  
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+    </footer>
+</body>
+
+</html>
