@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: transparent ;
+    overflow-x: hidden;
+    background: url("water.jpg") no-repeat;
+    background-position: center;
+    block-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-size: 100% 1000px;
+    background-attachment: fixed;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #461266;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #78bee7;
+    color: #fff;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #279bcd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #de96de;
+}

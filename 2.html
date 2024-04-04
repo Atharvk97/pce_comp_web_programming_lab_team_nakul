@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my2style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Outdoor Water Saving</title>
+    <style>
+        body 
+        {
+            background-color: rgb(219, 241, 241);
+        }
+        .head 
+        {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: auto;
+            height: 600px;
+            background-image: url(https://cdn.wallpaperjam.com/content/images/79/4a/794a41be2d03c640ab6060088f0225b93177e304.jpg);
+            border: 5px solid rgb(184, 235, 237) ;
+            border-radius: 0px;
+            margin: 0%;
+            padding: 0%;
+        }
+        #name 
+        {
+            color: rgb(55, 142, 72);
+            font-size: 80px;
+
+        }
+
+        .middle     
+        {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 30px;
+            padding: 10px 10px;
+        }
+
+        .im img 
+        {
+            border: 5px solid aqua;
+            border-radius: 200px;
+        }
+
+        .para 
+        {
+            margin: 15px 25px;
+            padding: 10px 20px;
+            font-size: x-large;
+        }
+        .bottom1
+        {
+            margin:20px;
+            padding: 20px;
+            display: flex;
+            
+        }
+        .blog
+        {
+            margin: 10px 5px ;
+            padding: 20px;
+            width: 500px;
+            height: 300px;
+            border-radius: 0%;
+            color: blueviolet;
+            background-color: rgb(25, 40, 35);
+        }
+        .last
+        {
+            display: flex;
+            justify-content: center;
+            color: blueviolet;
+            font-size: 20px;
+        }
+        footer {
+    background-color: #83bbf8;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #faf7fa, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4eb9e3, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #000000;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #092c09;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.para1{
+        font-size: large;
+    }
+    .middle3 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            background-color: #cff5fc;
+            
+        }
+        .frame {
+      display: flex;
+      height: 700px; 
+      padding: 0px;
+    }
+    
+
+    .frame img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+    }
+    .frame .text {
+      width: 60%;
+      padding: 20px;
+      font-style: normal;
+      font-weight: 50;
+     
+    }
+    h4{
+    font-size: 25px;
+    color: #092d74;
+    font-weight: 700;
+}
+#blog1{
+    background-image: url(https://media.istockphoto.com/id/1257679831/photo/seedlings-that-grow-from-perfect-soil-have-the-idea-of-protecting-the-hands-of-soil.jpg?s=612x612&w=0&k=20&c=DcBodn0SEUV3FlYagKVlqOintu0XqfD7YFSUFXDKsls=);
+}
+#blog2{
+    background-image: url(https://wateruseitwisely.com/wp-content/uploads/2021/06/EfficientIrrigation_Tile_467X451.jpeg);
+}
+#blog3{
+    background-image: url(https://wateruseitwisely.com/wp-content/uploads/2021/06/LowWaterUsePlants_Tile_1108X450.jpeg);
+}
+.blog{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    line-height: 1.15;
+    display: block;
+}
+#blog4{
+    background-image: url(https://static.wixstatic.com/media/5a432c_a5042e67d2bf45cd835ec35f24b2dccb~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5a432c_a5042e67d2bf45cd835ec35f24b2dccb~mv2.jpg);
+}
+#blog5{
+    background-image: url(https://5.imimg.com/data5/SELLER/Default/2024/1/375557419/YG/JP/RG/16091820/1-e9321711-7a8c-412c-8dcf-a64c3c1c9ec1-600x600-crop-center-500x500.jpg);
+}
+#blog6{
+    background-image: url(https://media.istockphoto.com/id/1163113594/photo/a-human-hand-holding-a-splash-of-water.jpg?s=612x612&w=0&k=20&c=ODmHoABBI2C2xsMI32cx8qRUrd7QFOnzrNpdZ0Op5h8=);
+}
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+       <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Importance Of Water</a></li>
+          <li><a href="#">Techniques Of Saving Water</a></li>
+          <li><a href="#">Indoor Water-Saving </a></li>
+          <li><a href="#">Outdoor Water-Saving</a></li>
+          <li><a href="#">AboutUs</a></li>
+          <li><a href="#">Newsletter </a></li>
+       </ul>
+    </div>
+    <div class="head" id="name">
+
+        Outdoor Water Saving
+
+
+    </div>
+    <div class="middle3">
+        <div class="frame">
+            <img src="https://wateruseitwisely.com/wp-content/uploads/2021/06/StepByStepXeriscaping_Circle_2.png" alt="">
+            <div class="text">
+                <p class="para1">
+                    Desert-friendly landscaping, like Xeriscaping, is a way to create a beautiful, easy care yard that can bring you hours of enjoyment. There are hundreds of low-water use plants with vibrant flowers and intoxicating fragrances that help to decrease some of the harsh effects of our desert climate by providing shade and extending our living space to the outdoors.
+                </p> <br> <br>
+                <h4>The Seven Principles of Xeriscape Design</h4> <br> <br> 
+                <p class="para1">
+                    Xeriscaping is defined by seven horticultural principles which help to ensure that landscapes, wherever they are located, reflect a sensitivity to the local environment and its climate. <br> <br>
+                </p>
+                <ol class="para1">
+                    <li><strong>Planning and Design</strong>. Create a plan that considers cost, function, and both water and energy efficiency (by placing plants to shade your home).</li> <br>
+                    <li><strong>Soil Improvement</strong>. Improve your soil health and it will benefit your plants and save water. Soil can also be graded to collect rainwater for your plants.</li> <br>
+                    <li><strong>Practical Turf Areas. </strong>Consider forgoing or minimizing the amount of grass in your landscape. Grass lawns use a lot of water and require specialized maintenance.</li> <br>
+                    <li><strong>Efficient Irrigation</strong>. Install a properly designed system that will deliver the right amount of water at the right time. Don’t forget about collecting rainwater.</li> <br>
+                    <li><strong>Mulch</strong>. Apply organic mulches to reduce evaporation from the soil surface, to keep soil temperatures cooler in summer, and to help prevent weed growth.</li> <br>
+                    <li><strong>Low Water-Use Plants</strong>. Select from hundreds of plants to provide many functions for your landscape, from attracting birds and butterflies to screening unsightly areas.</li> <br>
+                    <li><strong>Appropriate Maintenance</strong>. All landscapes need some care. Improper pruning and fertilizing can actually cause your landscape to use more water.</li> <br>
+                    </ol>
+            </div>
+        </div>
+    </div>
+    <div class="bottom1">
+        <a href="2.1.html" back style="text-decoration: none; color: #fff;" class="img1">
+        <p><div id="blog1" class="blog"></p>
+            <p>Soil Improvement</p>
+            </a>
+
+        </div>
+        <div id="blog2" class="blog">
+            <a href="2.2.html" back style="text-decoration: none; color: #fff;" class="img1">
+                <p>Efficient Irrigation</p>
+            </a>
+            </div>
+            <div id="blog3" class="blog">
+                <a href="2.3.html" back style="text-decoration: none; color: #fff;" class="img1">
+                    <p>Low-Water Use Plants</p>
+                </a>
+            </div>
+       
+    </div>
+    <div class="bottom1">
+        <a href="2.4.html" back style="text-decoration: none; color: #fff;" class="img1">
+        <p><div id="blog4" class="blog"></p>
+            <p>Mulch</p>
+            </a>
+
+        </div>
+        <div id="blog5" class="blog">
+            <a href="2.5.html" back style="text-decoration: none; color: #fff;" class="img1">
+                <p>Practical Turf Areas</p>
+            </a>
+            </div>
+            <div id="blog6" class="blog">
+                <a href="2.6.html" back style="text-decoration: none; color: #fff;" class="img1">
+                    <p>Appropriate Maintenance</p>
+                </a>
+            </div>
+       
+    </div>
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+          <center>
+            &copy; 2024 Water Conservation. All rights reserved.
+          </center>  
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </footer>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Usage Result</title>
+<style>
+    .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.result {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Water Usage Result</h1>
+<div class="container">
+    <div class="result">
+        <h2>Your Water Usage</h2>
+        <p id="waterUsageResult">Calculating...</p>
+        <canvas id="waterUsageChart" width="400" height="200"></canvas>
+    </div>
+</div>
+
+<script>
+    // Retrieve water usage data from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const waterUsage = urlParams.get('waterUsage');
+
+    // Display water usage result
+    document.getElementById('waterUsageResult').textContent = `Your estimated water usage is ${waterUsage} liters per day.`;
+
+    // Create chart
+    const ctx = document.getElementById('waterUsageChart').getContext('2d');
+    const waterUsageChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Shower', 'Toilet', 'Drinking', 'Dishwasher', 'Lawn', 'Laundry', 'Leaky Taps', 'Water-Saving Toilet', 'Car Wash', 'Water-Efficient Showerhead'],
+            datasets: [{
+                label: 'Water Usage (liters)',
+                data: [50, 25, 25, 25, 25, 25, 50, 25, 25, 25],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)',
+                    'rgba(153, 102, 255, 0.5)',
+                    'rgba(255, 159, 64, 0.5)',
+                    'rgba(255, 99, 132, 0.5)',
+                    'rgba(54, 162, 235, 0.5)',
+                    'rgba(255, 206, 86, 0.5)',
+                    'rgba(75, 192, 192, 0.5)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

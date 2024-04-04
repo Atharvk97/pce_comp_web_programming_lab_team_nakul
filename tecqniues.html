@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my2style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Outdoor Water Saving</title>
+    <style>
+        body 
+        {
+            background-color: rgb(219, 241, 241);
+        }
+        /*.head 
+        {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            width: auto;
+            height: 600px;
+            background-image: url(https://cdn.wallpaperjam.com/content/images/79/4a/794a41be2d03c640ab6060088f0225b93177e304.jpg);
+            border: 5px solid rgb(184, 235, 237) ;
+            border-radius: 0px;
+            margin: 0%;
+            padding: 0%;
+        }*/
+        #name 
+        {
+            color: rgb(55, 142, 72);
+            font-size: 80px;
+
+        }
+        footer {
+    background-color: #83bbf8;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #faf7fa, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #4eb9e3, #53d592);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #000000;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #092c09;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.middle1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            margin: 20px 40px;
+            padding: 10px 20px;
+            
+        }
+        .im  {
+            margin: 10px 5px ;
+            padding: 20px;
+            width: 100%;
+            height: 250px;
+            background-color: rgb(208, 235, 225);
+           
+            font-size: 25px;
+            font-weight: 700;
+            text-decoration: solid;
+   
+        }
+        
+
+    .tech {
+        background-color: rgb(183, 241, 241);
+
+    }
+
+
+
+    .water {
+        background-image: url(https://www.eeba.org/Data/Sites/1/media/blog/greywater.png);
+        height: 800px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+
+    .heading {
+        width: auto;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #head {
+        font-size: 90px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: violet;
+
+    }
+
+    .t1,
+    .t2,
+    .t3,
+    .t4,
+    .t5,
+    .t5,
+    .t6 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #ti1 img,
+    #ti3 img,
+    #ti5 img,
+    #ti7 img,
+    #ti9 img,
+    #ti11 img {
+        width: 600px;
+        height: 400px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #ti2,
+    #ti4,
+    #ti6,
+    #ti8,
+    #ti10,
+    #ti12 {
+        width: 50%px;
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+        font-size: large;
+    }
+
+    .l1,
+    .l2,
+    .l3,
+    .l4,
+    .l5,
+    .l6 {
+        margin: 1px 20px;
+        padding: 0%;
+    }
+
+    .s1,
+    .s2,
+    .s3,
+    .s4,
+    .s5,
+    .s6 {
+        font-size: 40px;
+
+    }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+       <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Importance Of Water</a></li>
+          <li><a href="#">Techniques Of Saving Water</a></li>
+          <li><a href="#">Indoor Water-Saving </a></li>
+          <li><a href="#">Outdoor Water-Saving</a></li>
+          <li><a href="#">AboutUs</a></li>
+          <li><a href="#">Newsletter </a></li>
+       </ul>
+    </div>
+    <header class="tech">
+
+        <div class="water">
+
+            <div class="heading" id="head">Water Conservation Technique</div>
+
+        </div>
+    <div class="s1">
+        Rain Water Harvesting:
+    </div>
+    <div class="t1">
+        <div class="t1" id="ti1">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/11/JA/PU/WA/46987259/new-product.jpeg"
+                alt="image is loading">
+        </div>
+        <div class="t1" id="ti2">
+            Collection Area: This is typically the roof of a building where rainwater is collected and then directed
+            into storage systems. The collection system can include gutters, downspouts, and sometimes, first flush
+            diverters which help in removing the first flow of rainwater which may contain contaminants from the
+            collecting surfaces.
+            <br>
+            Conveyance System: This consists of gutters and downspouts that channel the rainwater from the roof to
+            the storage container. These systems can be designed to filter out debris and leaves before the water
+            enters the storage system. <br>
+
+            Storage Systems: The collected water is stored in tanks, barrels, or cisterns. These storage systems can
+            be located above or below ground and are usually made from materials like plastic, concrete, or
+            fiberglass. The size and complexity of the storage system depend on the intended use of the collected
+            water and the amount of rainfall the area receives. <br>
+
+            Treatment and Use: Depending on its use, the harvested rainwater may require treatment before use. For
+            garden and landscape irrigation, minimal treatment is needed. However, for domestic use such as toilet
+            flushing, laundry, or showering, the water will need to be filtered and possibly disinfected. For
+            drinking purposes, rigorous purification methods including filtration, UV treatment, and possibly
+            chlorination are necessary to ensure the water is safe.
+        </div>
+    </div>
+    <div class="l1">
+        <a href="https://blog.mygov.in/water-conservation-rainwater-harvesting/">rainwater harvesting blog</a>
+    </div>
+
+
+    <div class="s2">
+        Greywater Recycling:
+    </div>
+    <div class="t2">
+        <div class="t2" id="ti4">
+            Greywater recycling involves collecting and treating wastewater generated from sources such as sinks,
+            showers, baths, and washing machines for reuse in non-potable applications. Unlike blackwater (which
+            contains human waste), greywater is relatively clean and can be treated and reused for purposes such as
+            landscape irrigation, toilet flushing, and laundry. Implementing greywater recycling systems can help
+            conserve freshwater resources, reduce strain on wastewater treatment facilities, and lower water bills
+            for households and businesses. <br>
+
+            Greywater recycling systems typically consist of several components, including collection, treatment,
+            storage, and distribution. The collection phase involves capturing greywater from sources within a
+            building, such as drainage pipes connected to sinks, showers, and washing machines. The greywater is
+            then directed to a treatment system, where it undergoes various processes to remove contaminants and
+            pathogens. <br>
+
+            Treatment methods for greywater recycling can vary depending on factors such as the intended reuse
+            application and local regulations. Common treatment technologies include filtration, sedimentation,
+            disinfection (e.g., chlorination, UV radiation), and biological processes (e.g., constructed wetlands).
+            These processes help remove suspended solids, organic matter, bacteria, and other pollutants from the
+            greywater, making it suitable for reuse. <br>
+            Once treated, the recycled greywater is stored in tanks or cisterns until it's needed for irrigation,
+            toilet flushing, or other non-potable uses. Storage capacity is designed based on factors such as water
+            demand, available space, and frequency of greywater generation. In some cases, greywater may be directly
+            distributed to irrigation systems or toilets without storage, depending on system design and operational
+            requirements.
+        </div>
+        <div class="t2" id="ti3">
+            <img src="https://www.chamberlainsaqua.co.uk/wp-content/uploads/2018/08/Greywater_ONLY_test1-1.jpg"
+                alt="image is loading">
+        </div>
+    </div>
+    <div class="l2">
+        <a href="https://www.godrejproperties.com/blog/greywater-recycling-reusing-water-for-irrigation-in-indian-homes">graywater Recycling blog</a>
+    </div>
+
+
+    <div class="s3">
+        Xeriscaping:
+    </div>
+    <div class="t3">
+        <div class="t3" id="ti5">
+            <img src="https://www.treehugger.com/thmb/XGzwJS9N7LO7JMYycey3Q_xkmds=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/xeriscaping-627447518-a0753be66d644f5cb7431545446f1933.jpg"
+                alt="image is loading">
+        </div>
+        <div class="t3" id="ti6">
+            Xeriscaping is a sustainable landscaping approach that focuses on creating beautiful outdoor spaces
+            while conserving water and minimizing maintenance requirements. It originated in arid and semi-arid
+            regions where water scarcity is a significant concern, but its principles can be applied to any
+            landscape to promote water efficiency and environmental sustainability. <br>
+
+            At the heart of xeriscaping is the idea of designing landscapes that thrive in their natural environment
+            with minimal supplemental irrigation. By selecting drought-tolerant plants, improving soil quality, and
+            employing water-saving techniques, xeriscaping allows homeowners, businesses, and communities to reduce
+            water usage, lower maintenance costs, and create landscapes that are both visually appealing and
+            ecologically beneficial. <br>
+
+            One of the key components of xeriscaping is careful plant selection. Drought-resistant plants that are
+            native to the region or well-adapted to the local climate are preferred, as they require less water and
+            maintenance compared to traditional landscaping plants. These may include succulents, native grasses,
+            wildflowers, and shrubs that have evolved to thrive in low-water conditions. By choosing the right
+            plants for the environment, xeriscaping can help conserve water resources and support local
+            biodiversity. <br>
+
+            In addition to plant selection, xeriscaping emphasizes soil improvement techniques to enhance water
+            retention and promote healthy root growth. Soil amendments such as compost, mulch, and organic matter
+            can improve soil structure, increase moisture retention, and reduce erosion. By building healthy,
+            nutrient-rich soil, xeriscaped landscapes can better withstand drought conditions and support the
+            long-term health of plants and ecosystems.
+        </div>
+    </div>
+    <div class="l3">
+        <a href="https://lawnlove.com/blog/xeriscaping-guide-for-lawn-and-garden/">Xeriscaping blog</a>
+    </div>
+
+
+    <div class="s4">
+        Recycle and Reuse of water:
+    </div>
+    <div class="t4">
+        <div class="t4" id="ti8">
+            Recycling and reusing resources are crucial components of sustainable living and environmental
+            conservation. By recycling materials and finding new uses for items instead of disposing of them,
+            individuals and communities can reduce waste, conserve natural resources, and minimize their
+            environmental impact. <br>
+
+            Recycling involves the collection and processing of materials such as paper, plastic, glass, and metal
+            so that they can be turned into new products. The process typically begins with collection, where
+            recyclable materials are gathered from households, businesses, and other sources. These materials are
+            then sorted, cleaned, and processed at recycling facilities to remove contaminants and prepare them for
+            manufacturing into new products. <br>
+
+            One of the most common materials recycled is paper. Paper recycling involves collecting used paper
+            products such as newspapers, magazines, cardboard, and office paper and processing them into new paper
+            products. The recycling process begins with the sorting of paper by type and grade. The paper is then
+            shredded, mixed with water, and turned into a pulp. The pulp is then cleaned, refined, and dried before
+            being formed into new paper products such as newsprint, packaging materials, and office paper. <br>
+
+            Another widely recycled material is plastic. Plastic recycling involves collecting used plastic
+            containers, bottles, and packaging materials and processing them into new plastic products. The
+            recycling process varies depending on the type of plastic and may involve sorting, shredding, washing,
+            melting, and molding the plastic into new shapes. Recycled plastic can be used to make a wide range of
+            products, including bottles, containers, bags, and even clothing.
+        </div>
+        <div class="t4" id="ti7">
+            <img src="https://www.netsolwater.com/netsol-water/assets/img/product-images/Use-of-recycled-water-in-Pharmaceutical-and-Oil-industry.png"
+                alt="image is loading">
+        </div>
+    </div>
+    <div class="l4">
+        <a href="https://blogs.worldbank.org/en/climatechange/scaling-water-reuse-why-recycling-our-wastewater-makes-sense">Recycle and Reuse of water blog</a>
+    </div>
+
+
+
+    <div class="s5">
+        Efficient Irrigation Systems:
+    </div>
+    <div class="t5">
+        <div class="t5" id="ti9">
+            <img src="https://news.stanford.edu/wp-content/uploads/2023/04/GettyImages-1319625630.jpg"
+                alt="image is loading">
+        </div>
+        <div class="t5" id="ti10">
+            Efficient irrigation systems play a crucial role in sustainable water management, particularly in
+            agricultural, landscaping, and urban settings. By optimizing water usage and minimizing waste, these
+            systems contribute to water conservation efforts, reduce water bills, and promote environmental
+            sustainability. In this comprehensive discussion, we will explore various types of efficient irrigation
+            systems, their components, benefits, and considerations for implementation. <br>
+
+            Irrigation is the artificial application of water to soil for the purpose of promoting plant growth.
+            Traditional irrigation methods, such as flood irrigation and overhead sprinklers, often result in
+            significant water loss due to evaporation, runoff, and inefficient water distribution. Efficient
+            irrigation systems address these challenges by delivering water directly to the root zone of plants,
+            optimizing water usage, and reducing wastage. <br>
+
+            One of the most widely used efficient irrigation systems is drip irrigation. Drip irrigation, also known
+            as trickle irrigation, involves the slow and precise application of water directly to the base of plants
+            through a network of tubes, emitters, and valves. This method minimizes water loss by delivering water
+            precisely where it's needed, minimizing evaporation and runoff. <br>
+            Optimal water management provided by efficient irrigation systems can lead to higher crop yields,
+            improved crop quality, and increased profitability for farmers and growers.
+            However, implementing efficient irrigation systems requires careful planning, design, and maintenance:
+        </div>
+    </div>
+    <div class="l5">
+        <a href="https://www.agrivi.com/blog/drip-irrigation-as-the-most-efficient-irrigation-system-type/"> Efficient Irrigation Systems blog</a>
+    </div>
+
+
+    <div class="s6">
+        Water-Efficient Fixtures:
+    </div>
+    <div class="t6">
+        <div class="t6" id="ti12">
+            Water-efficient fixtures play a crucial role in modern water conservation efforts, offering practical
+            solutions for reducing water consumption without sacrificing functionality or convenience. These
+            fixtures, ranging from faucets to toilets, are designed to minimize water wastage by employing
+            innovative technologies and design features that optimize water usage. By promoting the adoption of
+            water-efficient fixtures in homes, businesses, and public facilities, society can significantly reduce
+            water demand, alleviate pressure on freshwater resources, and mitigate the environmental impacts
+            associated with excessive water consumption. <br>
+
+            Faucets represent one of the most commonly used water fixtures in households and commercial settings.
+            Traditional faucets can dispense a significant amount of water, often more than necessary for everyday
+            tasks such as handwashing or dishwashing. Water-efficient faucets address this issue by incorporating
+            aerators and flow restrictors, which regulate the flow of water while maintaining adequate pressure.
+            These devices reduce water usage without compromising performance, offering a simple yet effective means
+            of conserving water in both residential and commercial environments. <br>
+
+            Similarly, showerheads play a significant role in water usage, particularly in terms of daily personal
+            hygiene routines. Conventional showerheads can consume a considerable volume of water per minute,
+            leading to unnecessary waste during showers. Water-efficient showerheads utilize technologies such as
+            aerating and laminar flow to deliver a satisfying shower experience while minimizing water consumption.
+            By reducing flow rates and optimizing water distribution, these fixtures enable individuals to conserve
+            water without sacrificing comfort or cleanliness.
+        </div>
+        <div class="t6" id="ti11">
+            <img src="https://app.contentatscale.ai/uploader/uploads/2023/01/how%20to%20improve%20water%20efficiency%20in%20buildings.png" alt="image is loading">
+        </div>
+    </div>
+    <div class="l6">
+        <a href="https://www.the71percent.org/water-efficient-appliances/"> Water-Efficient Fixtures blog</a>
+    </div>
+    </header>
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    <div class="footer-bottom">
+        <center>
+          &copy; 2024 Water Conservation. All rights reserved.
+        </center>  
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+    </footer>
+</body>
+
+</html>
